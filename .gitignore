@@ -1,0 +1,7 @@
+bin/
+obj/
+.cache/
+.git/
+compile_commands.json
+Makefile
+*.make
