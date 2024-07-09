@@ -1,15 +1,31 @@
 #include "game.h"
-
 #include <raylib.h>
+
+#include "editor/editor_scene.h"
+#include "game/game_scene.h"
+
+#include <iostream>
 
 Game::Game() {}
 
-void Game::Init() {}
+Game::~Game() { delete m_currentScene; }
 
-void Game::Update() {}
+void Game::loadScene(Scene *scene) {
+  m_currentScene = scene;
+  m_currentScene->Init();
+}
+
+void Game::Init() {
+  std::cout << "Game Init called!" << std::endl;
+  loadScene(new GameScene());
+}
+
+void Game::Update() { m_currentScene->Update(); }
 
 void Game::Render() const {
   BeginDrawing();
-  DrawRectangle(200, 200, 100, 100, RED);
+
+  m_currentScene->Render();
+
   EndDrawing();
 }
