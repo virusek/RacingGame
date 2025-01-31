@@ -10,11 +10,12 @@ int main(int argc, char *argv[]) {
 
   game.Init();
 
-  while (!WindowShouldClose()) {
-    game.Update();
-    game.Render();
-  }
+   while (!WindowShouldClose()) {
+     game.Update();
+     game.Render();
+   }
 
-  CloseWindow();
+   CloseWindow();
+
   return 0;
 }

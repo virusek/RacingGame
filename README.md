@@ -18,28 +18,10 @@ Your Personal Best will be visible on the leaderboard! Have fun racing!
 ## Dependencies
 
 To build this project, the following dependencies are required:
+ - CMake
+ - MSVC Compiler
 
-- **Premake5**: Download it from the [Premake5 website](https://premake.github.io/).
-- **Clang**: Install Clang using your package manager:
-    - On Ubuntu:
-        ```bash
-        sudo apt-get install clang
-        ```
-    - On macOS:
-        ```bash
-        brew install llvm
-        ```
-    - On Windows: Download from the [LLVM website](https://llvm.org/).
-- **Make**: Ensure Make is installed:
-    - On Ubuntu:
-        ```bash
-        sudo apt-get install build-essential
-        ```
-    - On macOS:
-        ```bash
-        xcode-select --install
-        ```
-    - On Windows: Install through [MSYS2](https://www.msys2.org/) or use the provided Make tools in the [MinGW](http://www.mingw.org/) or [Cygwin](https://www.cygwin.com/) distributions.
+Further info will be added in the near future.
 
 ## Installation
 To install this project, follow these steps:
@@ -54,27 +36,9 @@ To install this project, follow these steps:
     ```bash
     cd RacingGame
     ```
-3. Create Makefiles using *premake5*:
-    ```bash
-    premake5 gmake2
-    ```
-    or if building for Visual Studio, change `gmake2` to `vs2022`
-4. Build the project using *make*:
-    ```bash
-    make config=release
-    ```
-5. Make sure that the assets folder gets copied to the folder containing binaries. If not, copy the whole assets folder to bin/Release/
+3. Build the project using **CMAKE**
 
-### Optional Steps 
-
- - **Generate compile_commands.json for the clang lsp**
-    You'll need to add a module `ecc` for the premake5.
-    This module could be found on the [Premake5 website](https://premake.github.io/).
-    After installing the module, run: 
-    ```bash
-    premake5 ecc
-    ```
-    This should generate the `compile_commands.json` in the project directiory.
+4. Make sure that the assets folder gets copied to the folder containing binaries. If not, copy the whole assets folder to bin/Release/
 
 ## Roadmap
  - [ ] Build-in Map Editor: Used to create new race tracks.
