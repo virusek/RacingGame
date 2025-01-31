@@ -1,4 +1,4 @@
-#include "editor_scene.h"
+#include "EditorScene.h"
 
 #include <iostream>
 #include <raylib.h>

@@ -1,4 +1,4 @@
-#include "game_scene.h"
+#include "GameScene.h"
 
 #include <iostream>
 #include <raylib.h>

@@ -1,18 +1,18 @@
 #include <raylib.h>
 
-#include "game.h"
+#include "App.h"
 
 int main(int argc, char *argv[]) {
   InitWindow(1280, 720, "Racing Game");
   SetTargetFPS(60);
 
-  Game game;
+  App app;
 
-  game.Init();
+  app.Init();
 
    while (!WindowShouldClose()) {
-     game.Update();
-     game.Render();
+     app.Update();
+     app.Render();
    }
 
    CloseWindow();

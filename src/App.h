@@ -1,17 +1,14 @@
 #pragma once
 
-#include "core/scene.h"
+#include "core/Scene.h"
 
-class Game {
-private:
+class App {
   Scene *m_currentScene;
-
-private:
   void loadScene(Scene *scene);
 
 public:
-  Game();
-  ~Game();
+  App();
+  ~App();
 
   void Init();
   void HandleInput();
