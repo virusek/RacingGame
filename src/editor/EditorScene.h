@@ -1,5 +1,6 @@
 #pragma once
-#include "../core/Scene.h"
+
+#include "core/core.h"
 
 class EditorScene : public Scene {
 public:

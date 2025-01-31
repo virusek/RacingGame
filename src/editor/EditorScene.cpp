@@ -3,11 +3,16 @@
 #include <iostream>
 #include <raylib.h>
 
-EditorScene::EditorScene() {}
-EditorScene::~EditorScene() {}
+EditorScene::EditorScene() {
+  LOG("Creating a new EditorScene");
+}
+
+EditorScene::~EditorScene() {
+  LOG("Destructing EditorScene");
+}
 
 void EditorScene::Init() {
-  std::cout << "Editor Scene initialized!" << std::endl;
+  LOG_INIT("EditorScene Initialized!");
 }
 
 void EditorScene::Update() {}

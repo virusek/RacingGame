@@ -1,13 +1,18 @@
 #include "GameScene.h"
 
-#include <iostream>
-#include <raylib.h>
+GameScene::GameScene() {
+  LOG("Creating a new GameScene");
+}
 
-GameScene::GameScene() {}
-GameScene::~GameScene() {}
+GameScene::~GameScene() {
+  LOG("Destructing GameScene");
+}
 
-void GameScene::Init() { std::cout << "Game Scene initialized!" << std::endl; }
+void GameScene::Init() {
+  LOG_INIT("GameScene Initialized!");
+}
 
-void GameScene::Update() {}
+void GameScene::Update() {
+}
 
 void GameScene::Render() { DrawRectangle(200, 200, 100, 100, BLUE); }

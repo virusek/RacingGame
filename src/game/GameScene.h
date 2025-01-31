@@ -1,7 +1,10 @@
 #pragma once
-#include "../core/Scene.h"
+#include "core/core.h"
 
 class GameScene : public Scene {
+private:
+
+
 public:
   GameScene();
   ~GameScene() override;

@@ -85,5 +85,17 @@ if(WIN32)
 endif()
 
 # Link raylib to the game
-target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
-target_include_directories(${PROJECT_NAME} PRIVATE ${VENDOR_DIR}/Raylib/include)
+target_include_directories(${PROJECT_NAME} PUBLIC ${VENDOR_DIR}/Raylib/include)
+
+add_library(imgui STATIC
+        ${VENDOR_DIR}/imgui/imgui.cpp
+        ${VENDOR_DIR}/imgui/imgui_draw.cpp
+        ${VENDOR_DIR}/imgui/imgui_widgets.cpp
+        ${VENDOR_DIR}/imgui/imgui_tables.cpp
+        ${VENDOR_DIR}/imgui/rlImGui.cpp
+)
+
+target_include_directories(imgui PUBLIC ${VENDOR_DIR}/imgui ${VENDOR_DIR}/Raylib/include)
+
+# Link libraries to your executable
+target_link_libraries(${PROJECT_NAME} raylib imgui)

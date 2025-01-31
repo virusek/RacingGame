@@ -10,12 +10,15 @@ int main(int argc, char *argv[]) {
 
   app.Init();
 
-   while (!WindowShouldClose()) {
-     app.Update();
-     app.Render();
-   }
+  while (!WindowShouldClose()) {
+    app.HandleInput();
+    app.Update();
+    app.Render();
+  }
 
-   CloseWindow();
+  app.CleanUp();
+
+  CloseWindow();
 
   return 0;
 }

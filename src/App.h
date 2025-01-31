@@ -2,17 +2,22 @@
 
 #include "core/Scene.h"
 
+#include <vector>
+
 class App {
   Scene *m_currentScene;
-  void loadScene(Scene *scene);
 
+  std::vector<Scene*> m_scenes;
+
+  void loadScene(Scene *scene);
+  void renderUI();
 public:
-  App();
-  ~App();
+  App() = default;
+  ~App() = default;
 
   void Init();
   void HandleInput();
   void Update();
-  void Render() const;
+  void Render();
   void CleanUp();
 };
